@@ -211,7 +211,7 @@ export default function AkerSite() {
 
       <section className="section container" id="solutions">
         <div className="section-head wide"><div><span className="micro-label">01 / SOLUTIONS</span><h2>{t.pillarsTitle}</h2></div><p>{t.pillarsLead}</p></div>
-        <div className="pillar-grid">{t.pillars.map((p,i)=>{const Icon=icons[i];return <article className="pillar-card" key={p.title}><div className="icon-box"><Icon/></div><span className="card-index">0{i+1}</span><h3>{p.title}</h3><p>{p.text}</p><ArrowRight className="card-arrow"/></article>})}</div>
+        <div className="pillar-grid">{t.pillars.map((p,i)=>{const Icon=icons[i];return <a className="pillar-card" key={p.title} href={['#briolight','#aker-products','#services','#contact'][i] ?? '#contact'} aria-label={`${p.title} bölümüne git`}><div className="icon-box"><Icon/></div><span className="card-index">0{i+1}</span><h3>{p.title}</h3><p>{p.text}</p><ArrowRight className="card-arrow"/></a>})}</div>
       </section>
 
       <section className="briolight-section" id="briolight"><div className="container">
